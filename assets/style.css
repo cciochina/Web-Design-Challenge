@@ -1,83 +1,315 @@
-/* giving the body a dark background to better see the bright colored boxes */
 body {
-    background: gray;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .container {
+  background: rgb(216, 213, 213);
+  align-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+
+img.little-image {
+  max-width: 180px;
+  max-height: 120px;
+}
+
+
+/* main container - used on landing page */
+.container {
+  display: grid;
+  grid-template-columns: 100%;
+  margin-top: 40px;
+  padding: 10px;
+  grid-gap: 80px 10px;
+  align-content: center;
+}
+
+.container-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.container-4 {
+  width: 1000px;
+  max-height: 900px;
+  padding: 10px;
+  margin-top: 40px;
+  margin-left: 200px;
+  margin-right: 200px;
+  margin-bottom: 40px;
+  align-content: center;
+}
+
+.container-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 0;
+  width: 980px;
+  text-align: center;
+}
+
+
+.container5 {
+  display: grid;
+  grid-template-columns: 100%;
+  margin-top: 40px;
+  padding: 10px;
+  /* grid-gap: px 10px; */
+  text-align: center;
+  align-content: center;
+  max-width: 1300px;
+  margin-left: 100px;
+}
+
+
+.col-md-11 {
+  background-color: white;
+  font-size: 16px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* overview area - landing page */
+.col-md-8 {
+  background-color: rgb(216, 213, 213);
+  font-size: 16px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* visualizations - landing page */
+.col-md-4 {
+  background-color:rgb(216, 213, 213);
+  font-size: 16px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+/* a cell from the grid */
+div.cell {
+  background: white !important;
+  padding: 5px;
+  align-self: center;
+}
+
+
+/* horizontal line */
+hr.line1{
+	border-top: 2px solid #363434;
+}
+
+/* paragraph */
+p {
+  padding: 20px;
+}
+
+
+.row {
+  background-color: white !important;
+}
+
+img {
+  float: left;
+  max-width: 60%;
+  max-height: 60%;
+}
+
+img.big {
+  max-width: 90%;
+  max-height: 90%;
+}
+
+img.bigger {
+  max-width: 100%;
+  max-height: 100%;
+  float: none;
+}
+
+img.resize {
+  max-width:50%;
+  max-height:50%;
+  float: left;
+}
+
+img.little-image:hover {
+  border: 2px solid green;
+}
+
+h1 {
+  font-size: 20px;
+  color: rgb(85, 177, 120);
+  font-weight: bold;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+h2 {
+  font-size: 20px;
+  font-style: italic;
+  color: rgb(4, 53, 23);
+  font-weight: bold;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+h3 {
+  font-size: 15px;
+  font-style: italic;
+  color: rgb(43, 46, 44);
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+
+h4 {
+  font-size: 15px;
+  font-style: italic;
+  color: rgb(85, 177, 120);
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+.navbar-brand {
+  background-color: rgb(85, 177, 120);
+  font-size: 20px;
+  font-weight: bold;
+  color: white !important;
+  display: inline-block;
+  padding: 4px;
+  margin: 0;
+}
+
+.row {
+  display: flex;
+}
+
+.col {
+  flex: 50%;
+}
+
+
+.spancol {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+
+table, th, td {
+  /* border: 1px solid black; */
+  border-style: dashed;
+  border-collapse: collapse;
+  background-color: white;
+  font-size: 15px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+th, td {
+  padding: 10px;
+}
+th {
+  font-weight: bold;
+}
+
+table th:nth-child(1) {
+  display: none;
+}
+
+
+
+/* Here we define some styles that will ONLY be applied at screen sizes below 900 pixels */
+@media (max-width: 900px) {
+  .container-2 {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 100vh;
-    grid-gap: 0px 0px;
-  }
-  
-
-  
-  
-  img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 60%;
-  }
-  
-  /* every box is this size */
-  .box {
-    width: 1200px;
-    height: 1200px;
-  }
-  
-  
-  .box-1 {
-    width: 600px;
-    height: 600px;
-    background: white;
-    align-items: center;
-    align-self: center;
-    padding-left: 50px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    padding-right: 50;
-  }
-  .box-2 {
-    width: 400px;
-    height: 400px;
-    background: white;
-    align-items: center;
-    align-self: center;
-    padding-left: 50px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    padding-right: 50;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-auto-flow: column;
+    row-gap: 0px;
+    align-content: center;
+    /* max-width: 100%; */
   }
 
-  /* Here we define some styles that will ONLY be applied at screen sizes below 600 pixels */
-  @media (max-width: 600px) {
-    /* .box-1 {
-      background: purple;
-    } */
-  
-    /* .box-2 {
-    background: yellow;
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    border: solid 2px black;
-    } */
-  
-    /* .box-3 {
-      display: none;
-    } */
-  
-    /* .box-4 {
-      transform: rotate(360deg);
-      transition: transform 0.5s ease-in;
-    } */
-  
-    /* .box-5 {
-      width: 0;
-      height: 0;
-      border-left: 50px solid transparent;
-      b
-  
+  .container-3 {
+    max-width: 450px;
+    display: grid;
+    grid-template-columns: 100%;
+    row-gap: 0px;
+    align-content: center;
+    /* max-width: 100%; */
+  }
+
+  .container-4 {
+    max-width: 500px;
+    padding: 1px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    align-content: left;
+  }
+
+  img.little-image {
+    max-width: 90%;
+    max-height: 90%;
+  }
+
+  .col {
+    width: 100%;
+    float: left;
+  }
+  .row {
+    width: 100%;
+  }
+
+  .navbar {
+    background-color:rgb(85, 177, 120) !important;
+  }
+
+  .navbar-nav {
+    background-color: white;
+    padding: 0;
+    margin: 0;
+  }
+
+  table th:nth-child(1) {
+    display: none;
+  }
+  table td:nth-child(1) {
+    display: none;
+  }
+
+  table th:nth-child(4) {
+    display: none;
+  }
+  table td:nth-child(4) {
+    display: none;
+  }
+
+
+  table th:nth-child(5) {
+    display: none;
+  }
+  table td:nth-child(5) {
+    display: none;
+  }
+
+
+  table th:nth-child(6) {
+    display: none;
+  }
+  table td:nth-child(6) {
+    display: none;
+  }
+
+
+  table th:nth-child(7) {
+    display: none;
+  }
+  table td:nth-child(7) {
+    display: none;
+  }
+
+
+  table th:nth-child(9) {
+    display: none;
+  }
+  table td:nth-child(9) {
+    display: none;
+  }
+ 
+
+
+}
